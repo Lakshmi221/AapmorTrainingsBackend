@@ -24,7 +24,7 @@ supports_credentials=True,
 init_mail(app)
 start_scheduler()
 
-app.route('/health', methods=['GET'])
+@app.route('/health', methods=['GET'])
 def health_check():
     return {"status": "ok"}, 200
 
