@@ -46,6 +46,7 @@ jobs:
           echo "MAIL_USE_TLS=${{ secrets.MAIL_USE_TLS }}" >> $GITHUB_ENV
           echo "MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}" >> $GITHUB_ENV
           echo "MONGO_URI=${{ secrets.MONGO_URI }}" >> $GITHUB_ENV
+          echo "SCM_DO_BUILD_DURING_DEPLOYMENT=${{ secrets.SCM_DO_BUILD_DURING_DEPLOYMENT }}" >> $GITHUB_ENV
           echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
@@ -87,4 +88,5 @@ jobs:
 # ChatGPT said:
 #           app-name: 'Trainings-AAp'
 #           slot-name: 'Production'
+
 
