@@ -47,7 +47,7 @@ jobs:
           echo "MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}" >> $GITHUB_ENV \
           echo "MONGO_URI=${{ secrets.MONGO_URI }}" >> $GITHUB_ENV \
           # echo "SCM_DO_BUILD_DURING_DEPLOYMENT=${{ secrets.SCM_DO_BUILD_DURING_DEPLOYMENT }}" >> $GITHUB_ENV
-          echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
+          echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV \
       
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -87,4 +87,5 @@ jobs:
           slot-name: 'Production'
 
           
+
 
