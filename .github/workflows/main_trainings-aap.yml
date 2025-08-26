@@ -31,6 +31,23 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Set environment variables
+        run: |
+          echo "CLOUDINARY_API_KEY=${{ secrets.CLOUDINARY_API_KEY }}" >> $GITHUB_ENV \
+          echo "CLOUDINARY_API_SECRET=${{ secrets.CLOUDINARY_API_SECRET }}" >> $GITHUB_ENV \
+          echo "CLOUDINARY_CLOUD_NAME=${{ secrets.CLOUDINARY_CLOUD_NAME }}" >> $GITHUB_ENV \
+          echo "DB_NAME=${{ secrets.DB_NAME }}" >> $GITHUB_ENV \
+          echo "GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}" >> $GITHUB_ENV \
+          echo "MAIL_DEFAULT_SENDER=${{ secrets.MAIL_DEFAULT_SENDER }}" >> $GITHUB_ENV \
+          echo "MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}" >> $GITHUB_ENV \
+          echo "MAIL_PORT=${{ secrets.MAIL_PORT }}" >> $GITHUB_ENV \
+          echo "MAIL_SERVER=${{ secrets.MAIL_SERVER }}" >> $GITHUB_ENV \
+          echo "MAIL_USE_TLS=${{ secrets.MAIL_USE_TLS }}" >> $GITHUB_ENV \
+          echo "MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}" >> $GITHUB_ENV \
+          echo "MONGO_URI=${{ secrets.MONGO_URI }}" >> $GITHUB_ENV \
+          # echo "SCM_DO_BUILD_DURING_DEPLOYMENT=${{ secrets.SCM_DO_BUILD_DURING_DEPLOYMENT }}" >> $GITHUB_ENV
+          echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV \
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -68,4 +85,5 @@ jobs:
         with:
           app-name: 'Trainings-AAp'
           slot-name: 'Production'
+
           
